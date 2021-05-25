@@ -1,0 +1,41 @@
+@import "./static.scss";
+
+* {
+    color: $secondary-color;
+    font-family: "YuGothic";
+}
+
+button {
+    display: inline-block;
+    margin: 8px 0;
+    padding: 0px 20px;
+    height: 30px;
+    background-color: $secondary-color;
+    color: $primary-color;
+    border-width: 0;
+    font-weight: 600;
+    @include hover();
+}
+
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 18px;
+}
+h3 {
+    font-size: 16px;
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+}

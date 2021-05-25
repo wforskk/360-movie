@@ -1,0 +1,36 @@
+@import "~/src/style/static.scss";
+
+.grid {
+    display: grid;
+    grid-template-columns: calc(100vw - 20px);
+    grid-auto-rows: 100px;
+    column-gap: 10px;
+    row-gap: 5px;
+    width: calc(100vw - 20px);
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+    .grid {
+        // grid-template-columns: 1fr 1fr;
+
+        grid-template-columns:  repeat(2, calc((100vw - 30px)/ 2));
+        grid-auto-rows: 150px;
+    }
+}
+
+/* ▼画面サイズ（横幅）が900px以上の場合に適用 */
+@media screen and (min-width: 900px) {
+    .grid {
+        // grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns:  repeat(3, calc((100vw - 40px)/ 3));
+    }
+}
+
+/* ▼画面サイズ（横幅）が1200px以上の場合に適用 */
+@media screen and (min-width: 1200px) {
+    .grid {
+        // grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(4, calc((100vw - 50px)/ 4));
+    }
+}

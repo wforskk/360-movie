@@ -1,0 +1,32 @@
+@import "~/src/style/static.scss";
+
+
+.itemWrapper {
+    @include itemWrapper();
+
+    .form {
+        width: inherit;
+        height: auto;
+        background-color: $background-color;
+        padding: 10px;
+
+        .textArea {
+            display: block;
+            margin-bottom: 10px;
+
+            label {
+                color: $secondary-color-dark;
+            }
+
+            input {
+                color: $secondary-color-dark;
+            }
+            div {
+                color: $secondary-color-dark;  
+            }
+            p {
+                color: $hands-up-txt;
+            }
+        }
+    }
+}

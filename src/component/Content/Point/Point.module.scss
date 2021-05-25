@@ -1,0 +1,81 @@
+@import "~/src/style/static.scss";
+
+
+.itemWrapper {
+    @include itemWrapper();
+
+    .pointWrapper {
+        vertical-align: bottom;
+        margin-bottom: 15px;
+
+        .pointNum {
+            display: inline-block;
+            font-size: 26px;
+        }
+
+        .pointTxt {
+            font-size: 18px;
+            padding-left: 5px;
+        }
+
+        .pointContent {
+            font-size: 12px;
+            padding-left: 30px;
+        }
+
+        table {
+            td {
+                padding-bottom: 10px;
+
+                &.pickUpTxt {
+                    vertical-align: top;
+                    color: $pick-up-txt;
+                    width: 50px;
+                }
+            }
+
+            tr:last-child {
+                td {
+                    padding-bottom: 0;
+                }
+            }
+        }
+
+        .btnWrapper {
+            text-align: center;
+        }
+
+    }
+
+    /* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+    @media screen and (min-width: 600px) {
+        .pointWrapper {
+            .pointNum {
+                font-size: 50px;
+            }
+
+            .pointTxt {
+                font-size: 24px;
+                padding-left: 10px;
+            }
+
+            .pointContent {
+                font-size: 18px;
+                padding-left: 50px;
+            }
+
+            table {
+                td {
+                    &.pickUpTxt {
+                        width: 70px;
+                    }
+                }
+            }
+
+            .btn {
+                width: 400px;
+            }
+        }
+
+    }
+}

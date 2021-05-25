@@ -1,0 +1,14 @@
+@import "~/src/style/static.scss";
+
+
+.contentWrapper {
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: inherit;
+    width: inherit;
+    .content {
+        scroll-snap-align: start;
+        height: 100vh;
+        padding: 60px 10px 10px 10px; 
+    }
+}

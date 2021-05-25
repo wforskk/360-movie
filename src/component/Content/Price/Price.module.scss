@@ -1,0 +1,9 @@
+@import "~/src/style/static.scss";
+
+
+.itemWrapper {
+    @include itemWrapper();
+    .content {
+        font-size: 22px;
+    }
+}

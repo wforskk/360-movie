@@ -1,0 +1,24 @@
+@import "~/src/style/static.scss";
+
+
+.appBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100vw;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 10px;
+    z-index: 999;
+    .logoBtn {
+        display: inline-block;
+        height: 46px;
+        width: 200px;
+        background-image: url('~/public/NOKID_logo.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include hover();
+    }
+}

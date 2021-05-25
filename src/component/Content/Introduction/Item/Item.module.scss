@@ -1,0 +1,35 @@
+@import "~/src/style/static.scss";
+
+
+.item {
+    // border: 1px solid khaki;
+    // box-shadow: 0 0 0 0 khaki;
+    border-radius: 8px;
+    box-shadow: 0px 0px 2px 0px inset $secondary-color;
+    padding: 5px;
+
+    &:hover {
+        border: 1px solid $secondary-color;
+        box-shadow: 0px 0px 3px 0px  $secondary-color;
+        // cursor: pointer;
+        padding: 4px;
+        background-color: lighten($color: $primary-color, $amount: 2%);
+
+        // .itemTitle {
+        //     font-size: 26px;
+        // }
+        // .itemContent {
+        //     font-size: 14px;
+        // }
+    }
+
+    .itemTitle {
+        font-size: 24px;
+    }
+
+    .itemContent {
+        font-size: 12px;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+}
