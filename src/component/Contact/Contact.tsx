@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode, MouseEventHandler } from 'react'
 import css from './Contact.module.scss'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
@@ -63,6 +63,8 @@ const Contact = () => {
     //     console.log('submit')
     //     return false
     // }
+    const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    }
 
     return (
         <div className={css.contentWrapper}>
@@ -123,8 +125,10 @@ const Contact = () => {
                         rows={4}
                         variant='outlined'
                     />
-                    {/* <button className={css.contactBtn} type='submit'>送信</button> */}
-                    <button className={css.contactBtn} >送信(ダミー）</button>
+                    {/* <button className={css.contactBtn} type='submit'>
+                        <a href="/api/sendMail">送信</a>
+                    </button> */}
+                    <button className={css.contactBtn}>送信(処理なし）</button>
                 </form>
             </div>
             </div>

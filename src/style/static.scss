@@ -22,7 +22,7 @@ $background-color:rgb(223, 223, 223);
 @mixin hover() {
     &:hover {
         cursor: pointer;
-        background-color: $primary-color;
+        background-color: rgba($color:  $primary-color, $alpha: 0);
         color: $secondary-color;
         box-shadow: 0 0 0 1px inset $secondary-color;
     }
