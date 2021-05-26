@@ -24,9 +24,9 @@ const Content = ({ children }: Props) => (
         <div className={css.content}>
             <Point></Point>
         </div>
-        {/* <div className={css.content}>
+        <div className={css.content}>
             <Introduction></Introduction>
-        </div> */}
+        </div>
         <div className={css.content}>
             <Template></Template>
         </div>
