@@ -1,0 +1,24 @@
+@import "~/src/style/static.scss";
+
+
+.tempItem {
+    width: inherit;
+    height: 500px;
+    background-image: url('~/public/station_phone.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.itemNumber {
+    text-align: center;
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+    .tempItem {
+        width: inherit;
+        height: 500px;
+        background-image: url('~/public/station.png');
+    }
+
+}

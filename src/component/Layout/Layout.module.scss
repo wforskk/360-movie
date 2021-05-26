@@ -5,8 +5,13 @@
     height: 100vh;
     .main {
         background-color: $primary-color;
-        height: 100vh;
         width: inherit;
+    }
+    /* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+    @media screen and (min-width: 600px) {
+        .main {
+            height: 100vh;
+        }
     }
 
     .footer {

@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react'
 import css from './Point.module.scss'
 import SubjectTitle from '../../Util/SubjectTitle/SubjectTitle'
 import PickUpTxt from '../../Util/PickUpTxt/PickUpTxt'
+import ButtonLarge from '../../Util/ButtonLarge/ButtonLarge'
 
 
 type Props = {
@@ -30,9 +31,7 @@ const Point = ({ children }: Props) => (
                     </tr>
                 </tbody>
             </table>
-            <div className={css.btnWrapper}>
-                <button className={css.btn}>「お問い合わせ」で無料作成</button>
-            </div>
+            <ButtonLarge>「お問い合わせ」で無料作成</ButtonLarge>
         </div>
         <div className={css.pointWrapper}>
             <span className={css.pointNum}>02</span>

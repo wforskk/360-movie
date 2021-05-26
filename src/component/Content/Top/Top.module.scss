@@ -20,9 +20,8 @@ $backgroundColor: rgba($primary-color, .7);
     /* 横方向中央揃え（Safari用） */
     justify-content: center;
     /* 横方向中央揃え */
-    height: 100%;
-    background-color: lavenderblush;
-    background-image: url('~/public/station.png');
+    height: calc(100vh - 70px);
+    background-image: url('~/public/station_phone.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -44,20 +43,26 @@ $backgroundColor: rgba($primary-color, .7);
             box-shadow: 0px 5px 16px 4px $backgroundColor;
         }
     }
+}
 
-    /* ▼画面サイズ（横幅）が600px以上の場合に適用 */
-    @media screen and (min-width: 600px) {
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+    .itemWrapper {
+
+        background-image: url('~/public/station.png');
+
         .txtWrapper {
             padding: 0 20% 100px 0;
 
             .message {
                 @include txt(26px);
-    
+
             }
-    
+
             .compLogo {
                 @include txt(36px);
             }
         }
     }
+
 }

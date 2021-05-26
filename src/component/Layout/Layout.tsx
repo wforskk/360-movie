@@ -5,14 +5,15 @@ import AppBar from '../AppBar/AppBar'
 
 
 type Props = {
+    dispBtn: boolean,
     children?: ReactNode
 }
 
-const Layout = ({ children }: Props) => (
+const Layout = (props: Props) => (
     <div className={css.appWrapper}>
-        <AppBar></AppBar>
+        <AppBar dispBtn={props.dispBtn}></AppBar>
         <div className={css.main}>
-            {children}
+            {props.children}
         </div>
         {/* <footer className={css.footer}>
             footer

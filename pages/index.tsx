@@ -4,7 +4,7 @@ import Content from '../src/component/Content/Content'
 
 const IndexPage = () => {
     return (<>
-        <Layout>
+        <Layout dispBtn={true}>
             <Content></Content>
         </Layout>
     </>)
