@@ -16,6 +16,6 @@ export default function TempItem(props: Props): JSX.Element {
         <>
             <div className={css.tempItem}>
             </div>
-            <div className={css.itemNumber}>1</div>
+            <div className={css.itemNumber}>{props.children}</div>
         </>)
 }

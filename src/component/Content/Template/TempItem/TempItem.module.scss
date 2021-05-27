@@ -9,16 +9,22 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
 .itemNumber {
     text-align: center;
+    margin: 10px;
 }
 
 /* ▼画面サイズ（横幅）が600px以上の場合に適用 */
 @media screen and (min-width: 600px) {
     .tempItem {
         width: inherit;
-        height: 500px;
+        height: 70%;
         background-image: url('~/public/station.png');
+    }
+
+    .itemNumber {
+        font-size: 24px;
     }
 
 }

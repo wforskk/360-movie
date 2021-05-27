@@ -2,12 +2,25 @@
 
 .button {
     display: inline-block;
-    margin: 8px 0;
-    padding: 0px 20px;
-    height: 30px;
+    margin: 5px 0;
+    padding: 0px 15px;
+    height: 40px;
     background-color: $secondary-color;
     color: $primary-color;
     border-width: 0;
     font-weight: 600;
+    font-size: 16px;
     @include hover();
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+
+    .button {
+        display: inline-block;
+        padding: 0px 20px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 20px;
+    }
 }

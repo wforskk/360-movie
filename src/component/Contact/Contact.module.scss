@@ -27,14 +27,8 @@
                     display: block;
                     margin-bottom: 10px;
 
-                    label {
-                        color: $secondary-color-dark;
-                    }
-
-                    input {
-                        color: $secondary-color-dark;
-                    }
-
+                    label,
+                    input,
                     div {
                         color: $secondary-color-dark;
                     }
@@ -43,12 +37,23 @@
                         color: $hands-up-txt;
                     }
                 }
+
+                .notActivBtn {
+                    display: inline-block;
+                    margin: 8px 0;
+                    padding: 0px 20px;
+                    height: 30px;
+                    line-height: 30px;
+                    background-color: gray;
+                    color: rgb(82, 82, 82);
+                    border-width: 0;
+                    font-weight: 600;
+                }
             }
 
             /* ▼画面サイズ（横幅）が600px以上の場合に適用 */
             @media screen and (min-width: 600px) {
                 .form {
-                    width: 70%;
                     margin-left: auto;
                     margin-right: auto;
                 }

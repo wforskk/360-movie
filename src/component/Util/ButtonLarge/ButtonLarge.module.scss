@@ -6,11 +6,12 @@
         display: inline-block;
         margin: 8px 0;
         padding: 0px 20px;
-        height: 30px;
+        height: 60px;
         background-color: $secondary-color;
         color: $primary-color;
         border-width: 0;
         font-weight: 600;
+        font-size: 20px;
         @include hover();
     }
 

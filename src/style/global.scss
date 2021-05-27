@@ -1,7 +1,7 @@
 @import "./static.scss";
 
 * {
-    color: $secondary-color;
+    color: $txt-color;
     font-family: "YuGothic";
 }
 
@@ -14,20 +14,29 @@ button {
     color: $primary-color;
     border-width: 0;
     font-weight: 600;
+
     * {
         color: inherit
     }
+
     @include hover();
 }
 
 h1 {
     font-size: 24px;
 }
+
 h2 {
     font-size: 18px;
 }
+
 h3 {
     font-size: 16px;
+}
+
+ul,
+li {
+    color: $secondary-color-dark;
 }
 
 /* ▼画面サイズ（横幅）が600px以上の場合に適用 */
@@ -35,9 +44,11 @@ h3 {
     h1 {
         font-size: 36px;
     }
+
     h2 {
         font-size: 28px;
     }
+
     h3 {
         font-size: 22px;
     }
