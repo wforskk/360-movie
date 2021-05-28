@@ -3,21 +3,21 @@ var nodemailer = require('nodemailer');
 require('dotenv').config()
 
 export default function contact(req: NextApiRequest, res: NextApiResponse) {
-    console.log(process.env.password)
+    const email = '360app.rep.info@gmail.com'
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         host: 'smtp.gmail.com',
         port: 456,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: 'sales.nokid@gmail.com', // generated ethereal user
+            user: email, // generated ethereal user
             pass: process.env.password, // generated ethereal password
         },
     })
 
     const mailData = {
-        from: 'sales.nokid@gmail.com',
-        to: 'sales.nokid@gmail.com',
+        from: email,
+        to: email,
         subject: '【360°動画_フォーム回答】',
         html:
             `会社名：　${req.body.companyName}<br />
