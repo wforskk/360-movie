@@ -3,6 +3,7 @@ var nodemailer = require('nodemailer');
 require('dotenv').config()
 
 export default function contact(req: NextApiRequest, res: NextApiResponse) {
+    console.log(process.env.password)
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         host: 'smtp.gmail.com',
@@ -15,7 +16,6 @@ export default function contact(req: NextApiRequest, res: NextApiResponse) {
     })
 
     const mailData = {
-        // from: req.body.mailAddress,
         from: 'sales.nokid@gmail.com',
         to: 'sales.nokid@gmail.com',
         subject: '【360°動画_フォーム回答】',
