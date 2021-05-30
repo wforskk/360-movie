@@ -14,7 +14,7 @@ const ButtonLarge = ({ children }: Props) => {
 
     // 第一階層押下処理
     const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        router.push('/cotact')
+        router.push('/contact')
     }
     return (
         <div className={css.btnWrapper}>

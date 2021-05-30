@@ -12,10 +12,9 @@ const Button = ({ children }: Props) => {
     // 画面遷移用宣言
     const router = useRouter()
 
-
     // 第一階層押下処理
     const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        router.push('/cotact')
+        router.push('/contact')
     }
     return (
         <>

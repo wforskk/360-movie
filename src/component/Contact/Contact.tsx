@@ -6,6 +6,7 @@ import { MenuItem } from '@material-ui/core'
 import SubjectTitle from '../Util/SubjectTitle/SubjectTitle'
 import HandsUpTxt from '../Util/HandsUpTxt/HandsUpTxt'
 import PickUpTxt from '../Util/PickUpTxt/PickUpTxt'
+import { useRouter } from 'next/router'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -34,6 +35,10 @@ type Props = {
 
 const currencies = [
     {
+        label: '未選択',
+        value: '未選択',
+    },
+    {
         label: '駅（フォーム）',
         value: '駅（フォーム）',
     },
@@ -60,12 +65,15 @@ const isStringNull = (val: string): boolean => {
 
 const Contact = () => {
 
+    // 画面遷移用宣言
+    const router = useRouter()
+
     const [companyName, setCompanyName] = React.useState('')
     const [name, setName] = React.useState('')
     const [phoneNumber, setPhoneNumber] = React.useState('')
     const [mailAddress, setMailAddress] = React.useState('')
     const [url, setUrl] = React.useState('')
-    const [currency, setCurrency] = React.useState('駅（フォーム）')
+    const [currency, setCurrency] = React.useState('未選択')
     const [remarks, setRemarks] = React.useState('')
 
 
@@ -121,11 +129,15 @@ const Contact = () => {
                 setPhoneNumber('')
                 setMailAddress('')
                 setUrl('')
-                setCurrency('駅（フォーム）')
+                setCurrency('未選択')
                 setRemarks('')
+
 
             }
         })
+        setTimeout(() => {
+            router.push('/contactDone')
+        }, 0);
     }
 
     return (
@@ -133,6 +145,7 @@ const Contact = () => {
             <div className={css.content}>
                 <div className={css.itemWrapper} id='contact'>
                     <SubjectTitle text='お問い合わせ'></SubjectTitle>
+                    <PickUpTxt>※動画制作依頼の場合はパターン選択・URLの設定をお願いいたします。</PickUpTxt>
                     <form className={css.form} noValidate autoComplete="off" onSubmit={handleSubmit}>
                         <TextField
                             id="companyName"
@@ -207,12 +220,11 @@ const Contact = () => {
                                 送信
                             </button>
                         ) : (
-                            <div className={css.notActivBtn}>
-                                送信
+                                <div className={css.notActivBtn}>
+                                    送信
                             </div>
-                        )} 
+                            )}
                     </form>
-                    <PickUpTxt>※動画制作依頼の場合はパターン選択・URLの設定をお願いいたします。</PickUpTxt>
                 </div>
             </div>
         </div>

@@ -1,0 +1,16 @@
+@import "~/src/style/static.scss";
+
+
+
+.contentWrapper {
+    width: inherit;
+
+    .content {
+        padding: 60px 10px 10px 10px;
+
+        .itemWrapper {
+            @include itemWrapper();
+        }
+
+    }
+}

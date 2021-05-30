@@ -19,38 +19,49 @@ export default async function contact(req: NextApiRequest, res: NextApiResponse)
             oauth2Client.getAccessToken((err: any, token: any) => {
                 if (err) {
                     reject("Failed to create access token :(");
+                    console.log(err)
                 }
                 resolve(token);
             })
         })
 
         const transporter = nodemailer.createTransport({
-          service: "gmail",
-          auth: {
-            type: "OAuth2",
-            user: process.env.EMAIL,
-            accessToken,
-            clientId: process.env.CLIENT_ID,
-            clientSecret: process.env.CLIENT_SECRET,
-            refreshToken: process.env.REFRESH_TOKEN
-          }
+            service: "gmail",
+            auth: {
+                type: "OAuth2",
+                user: process.env.EMAIL,
+                accessToken,
+                clientId: process.env.CLIENT_ID,
+                clientSecret: process.env.CLIENT_SECRET,
+                refreshToken: process.env.REFRESH_TOKEN
+            }
         });
-      
+
         return transporter;
     }
 
     const sendEmail = async (emailOptions: any) => {
-      let emailTransporter = await createTransporter();
-      await emailTransporter.sendMail(emailOptions);
+        let emailTransporter = await createTransporter();
+        await emailTransporter.sendMail(emailOptions);
     };
-    
+
+    let text = '会社名：　' + req.body.companyName
+        + '\n名前：　' + req.body.name
+        + '\n電話番号：　' + req.body.phoneNumber
+        + '\nメールアドレス：　' + req.body.mailAddress
+        + '\nパターン選択：　' + req.body.currency
+        + '\n動画URL：　' + req.body.url
+        + '\nお問い合わせ：'
+        + '\n' + req.body.remarks
+
     sendEmail({
-      subject: "Test",
-      text: "I am sending an email from nodemailer!",
-      to: process.env.EMAIL,
-      from: process.env.EMAIL
+        subject: '【360°動画_フォーム回答】',
+        text: text,
+        to: process.env.EMAIL,
+        from: process.env.EMAIL
     });
 
+    // nodemailer用の記述
     // const email = '360app.rep.info@gmail.com'
     // let transporter = nodemailer.createTransport({
     //     service: 'gmail',
