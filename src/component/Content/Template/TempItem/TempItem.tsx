@@ -17,5 +17,8 @@ export default function TempItem(props: Props): JSX.Element {
             <div className={css.tempItem}>
             </div>
             <div className={css.itemNumber}>{props.children}</div>
+            <div className={css.tempItem2}>
+            </div>
+            <div className={css.itemNumber2}>2</div>
         </>)
 }

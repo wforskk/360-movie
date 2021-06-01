@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+* {
+  color: #dfdfdf;
+  font-family: "YuGothic";
+}
+
+button {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 0px 20px;
+  height: 30px;
+  background-color: #6cc7a8;
+  color: #0a141e;
+  border-width: 0;
+  font-weight: 600;
+}
+button * {
+  color: inherit;
+}
+button:hover {
+  cursor: pointer;
+  background-color: rgba(10, 20, 30, 0);
+  color: #6cc7a8;
+  box-shadow: 0 0 0 1px inset #6cc7a8;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
+ul,
+li {
+  color: #389b7a;
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+}

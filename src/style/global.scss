@@ -23,15 +23,31 @@ button {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 12px;
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    h3 {
+        font-size: 16px;
+    }
 }
 
 ul,

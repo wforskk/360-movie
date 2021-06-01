@@ -4,11 +4,5 @@
 .itemWrapper {
     @include itemWrapper();
     text-align: center;
-    background-image: url('~/public/4801209_m.jpg');
-    background-color: rgba(50, 50, 50, .7);
-    background-blend-mode: darken;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 
 }

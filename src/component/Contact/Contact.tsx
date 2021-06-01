@@ -42,10 +42,10 @@ const currencies = [
         label: '駅（フォーム）',
         value: '駅（フォーム）',
     },
-    // {
-    //     label: 'パターン2',
-    //     value: '002',
-    // },
+    {
+        label: '飛行機（機内）',
+        value: '飛行機（機内）',
+    },
     // {
     //     label: 'パターン3',
     //     value: '003',

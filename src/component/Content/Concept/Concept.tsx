@@ -2,11 +2,15 @@ import React, { ReactNode } from 'react'
 import css from './Concept.module.scss'
 import SubjectTitle from '../../Util/SubjectTitle/SubjectTitle'
 import PickUpTxt from '../../Util/PickUpTxt/PickUpTxt'
+import Youtube from '../../Util/YouTube/Youtube'
 
 const Concept = () => (
     <div className={css.itemWrapper}>
         <SubjectTitle text='Concept'></SubjectTitle>
-        <h1><PickUpTxt>『VRでyoutubeの視聴維持率を上げませんか！？』</PickUpTxt></h1>
+        <h1><PickUpTxt>『VRで映像の視聴維持率を上げませんか！？』</PickUpTxt></h1>
+        <Youtube embedId='Rya4bc9F8gU' >
+            サービスサンプルVR動画
+        </Youtube>
         <h3>
             VR動画は制作に時間とお金がかかるイメージありませんか？<br />
             確かに<PickUpTxt>VR動画を一から制作した場合、かなりコストがかかってしまいます。</PickUpTxt><br />

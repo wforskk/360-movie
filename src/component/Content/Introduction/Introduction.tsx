@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import css from './Introduction.module.scss'
 import SubjectTitle from '../../Util/SubjectTitle/SubjectTitle'
-import Youtube from './YouTube/Youtube'
+import Youtube from '../../Util/YouTube/Youtube'
 
 
 type Props = {

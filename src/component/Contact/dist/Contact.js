@@ -37,6 +37,10 @@ var currencies = [
         label: '駅（フォーム）',
         value: '駅（フォーム）'
     },
+    {
+        label: '飛行機（機内）',
+        value: '飛行機（機内）'
+    },
 ];
 var isStringNull = function (val) {
     if (val == null || val == '') {
