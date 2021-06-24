@@ -2,32 +2,12 @@
 exports.__esModule = true;
 var react_1 = require("react");
 var Contact_module_scss_1 = require("./Contact.module.scss");
-var styles_1 = require("@material-ui/core/styles");
 var TextField_1 = require("@material-ui/core/TextField");
 var core_1 = require("@material-ui/core");
 var SubjectTitle_1 = require("../Util/SubjectTitle/SubjectTitle");
 var HandsUpTxt_1 = require("../Util/HandsUpTxt/HandsUpTxt");
 var PickUpTxt_1 = require("../Util/PickUpTxt/PickUpTxt");
 var router_1 = require("next/router");
-var useStyles = styles_1.makeStyles(function (theme) {
-    return styles_1.createStyles({
-        root: {
-            '& > *': {
-                margin: theme.spacing(1),
-                width: '25ch'
-            },
-            '& label.Mui-focused': {
-                color: 'rgb(96, 151, 133)'
-            }
-        },
-        input: {
-            color: 'rgb(96, 151, 133)',
-            '& input': {
-                color: 'rgb(96, 151, 133)'
-            }
-        }
-    });
-});
 var currencies = [
     {
         label: '未選択',

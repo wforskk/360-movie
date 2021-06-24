@@ -2,16 +2,13 @@
 
 .appWrapper {
     width: 100vw;
-    height: 100vh;
+
     .main {
         background-color: $primary-color;
-        width: inherit;
-    }
-    /* ▼画面サイズ（横幅）が600px以上の場合に適用 */
-    @media screen and (min-width: 600px) {
-        .main {
-            height: 100vh;
-        }
+        margin-top: 70px;
+        min-height: calc(100vh - 70px);
+        // @include pageScroll();
+        @include pagePadding();
     }
 
     .footer {

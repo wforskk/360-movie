@@ -1,0 +1,67 @@
+@import "~/src/style/static.scss";
+
+.form {
+
+    .section {
+        @include formSection();
+
+        .sectionTitle {
+            color: $secondary-color-dark;
+            font-size: 1.5em;
+            font-weight: 560;
+            text-align: center;
+            // margin-bottom: 10px;
+        }
+
+        .image {
+            position: relative;
+            width: calc(100vw - 80px);
+            height: calc(1080 / 1920 * calc(100vw - 80px));
+            margin-top: 20px;
+
+            .blankContent {
+                box-shadow: 0 0 0 1px inset $primary-color;
+                width: inherit;
+                height: inherit;
+                padding: 10px;
+            }
+        }
+
+        .textArea {
+            display: block;
+            margin-top: 20px;
+
+            label,
+            input,
+            div {
+                color: $secondary-color-dark;
+            }
+
+            div div {
+                padding-left: 10px;
+            }
+
+            p {
+                color: $hands-up-txt;
+            }
+        }
+    }
+    .submitBtn {
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .form {
+        .section {
+
+            .image {
+                width: calc(100vw - 200px);
+                height: calc(1080 / 1920 * calc(100vw - 200px));
+            }
+        }
+        .submitBtn {
+            margin-left: 20px;
+        }
+    }
+}

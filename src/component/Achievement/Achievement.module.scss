@@ -1,0 +1,20 @@
+@import "~/src/style/static.scss";
+
+
+.itemWrapper {
+    padding: 0 10px 0 10px;
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+    .itemWrapper {
+        padding: 0 150px 0 150px;
+    }
+}
+
+/* ▼画面サイズ（横幅）が1200px以上の場合に適用 */
+@media screen and (min-width: 1200px) {
+    .itemWrapper {
+        padding: 0 300px 0 300px;
+    }
+}

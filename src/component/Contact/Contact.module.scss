@@ -1,80 +1,23 @@
 @import "~/src/style/static.scss";
 
+.form {
 
+    .section {
+        @include formSection();
 
-.contentWrapper {
-    // overflow: auto;
-    // scroll-snap-type: y mandatory;
-    // height: inherit;
-    width: inherit;
-    // -webkit-overflow-scrolling: touch;
+        .textArea {
+            display: block;
+            margin-bottom: 20px;
 
-    .content {
-        // scroll-snap-align: start;
-        // height: 100vh;
-        padding: 60px 10px 10px 10px;
-
-        .itemWrapper {
-            @include itemWrapper();
-
-            .form {
-                width: inherit;
-                height: auto;
-                background-color: $background-color;
-                padding: 10px;
-
-                .textArea {
-                    display: block;
-                    margin-bottom: 10px;
-
-                    label,
-                    input,
-                    div {
-                        color: $secondary-color-dark;
-                    }
-
-                    p {
-                        color: $hands-up-txt;
-                    }
-                }
-
-                .notActivBtn {
-                    display: inline-block;
-                    margin: 8px 0;
-                    padding: 0px 20px;
-                    height: 30px;
-                    line-height: 30px;
-                    background-color: gray;
-                    color: rgb(82, 82, 82);
-                    border-width: 0;
-                    font-weight: 600;
-                }
+            label,
+            input,
+            div {
+                color: $secondary-color-dark;
             }
 
-            /* ▼画面サイズ（横幅）が600px以上の場合に適用 */
-            @media screen and (min-width: 600px) {
-                .form {
-                    margin-left: auto;
-                    margin-right: auto;
-                }
+            p {
+                color: $hands-up-txt;
             }
-        }
-
-    }
-}
-
-/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
-@media screen and (min-width: 600px) {
-    .contentWrapper {
-        overflow: auto;
-        scroll-snap-type: y mandatory;
-        height: inherit;
-        width: inherit;
-        -webkit-overflow-scrolling: touch;
-
-        .content {
-            height: 100vh;
-            scroll-snap-align: start;
         }
     }
 }

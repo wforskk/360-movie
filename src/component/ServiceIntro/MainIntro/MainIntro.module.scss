@@ -1,0 +1,33 @@
+@import "~/src/style/static.scss";
+
+.content {
+    padding-bottom: 20px;
+    h2 {
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+
+    h3 {
+        padding: 0 20px;
+    }
+    .fristIntro {
+        h2 {
+            margin-top: 0;
+        }
+    }
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+    .content {
+        padding-bottom: 40px;
+        h2 {
+            padding: 0 50px;
+            margin-top: 80px;
+        }
+    
+        h3 {
+            padding: 0 100px;
+        }
+    }
+}

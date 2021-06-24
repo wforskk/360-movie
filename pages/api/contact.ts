@@ -49,13 +49,11 @@ export default async function contact(req: NextApiRequest, res: NextApiResponse)
         + '\n名前：　' + req.body.name
         + '\n電話番号：　' + req.body.phoneNumber
         + '\nメールアドレス：　' + req.body.mailAddress
-        + '\nパターン選択：　' + req.body.currency
-        + '\n動画URL：　' + req.body.url
         + '\nお問い合わせ：'
         + '\n' + req.body.remarks
 
     sendEmail({
-        subject: '【360°動画_フォーム回答】',
+        subject: '【360°動画_お問い合わせ】',
         text: text,
         to: process.env.EMAIL,
         from: process.env.EMAIL

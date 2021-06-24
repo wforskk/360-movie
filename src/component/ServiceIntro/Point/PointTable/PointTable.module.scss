@@ -1,0 +1,30 @@
+@import "~/src/style/static.scss";
+
+.pointContent {
+    td {
+        padding-bottom: 10px;
+
+        &.pickUpTxt {
+            vertical-align: top;
+            color: $pick-up-txt;
+            width: 70px;
+        }
+    }
+
+    tr:last-child {
+        td {
+            padding-bottom: 0;
+        }
+    }
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+    .pointContent {
+        td {
+            &.pickUpTxt {
+                width: 110px;
+            }
+        }
+    }
+}
