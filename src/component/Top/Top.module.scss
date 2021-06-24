@@ -1,0 +1,235 @@
+@import "~/src/style/static.scss";
+$txt-bg-color: rgba($primary-color, .7);
+
+@mixin txt($fontSize) {
+    font-size: $fontSize;
+    text-align: center;
+    display: block;
+    word-wrap: break-word;
+    border-radius: 2px;
+
+    .serviceName {
+        // padding-right: 40px;
+        font-size: 1.3em;
+        font-weight: 500;
+    }
+}
+
+@mixin txtAnimProp {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: transparent;
+}
+
+@keyframes txtBgAnim {
+    0% {
+        background-color: transparent;
+        box-shadow: 0 0 0 0 $txt-bg-color;
+        width: 260px;
+        height: 30px;
+    }
+
+    10% {
+        box-shadow: 0 0 0 0 $txt-bg-color;
+    }
+
+    30% {
+        box-shadow: 0 0 10px 14px $txt-bg-color;
+    }
+
+    40% {
+        background-color: $txt-bg-color;
+    }
+
+    70% {
+        width: 260px;
+        height: 30px;
+    }
+
+    100% {
+        background-color: $txt-bg-color;
+        box-shadow: 0 0 10px 14px $txt-bg-color;
+        width: 150px;
+        height: 35px;
+
+    }
+}
+@keyframes txtBgAnimPc {
+    0% {
+        background-color: transparent;
+        box-shadow: 0 0 0 0 $txt-bg-color;
+        width: 650px;
+        height: 71px;
+    }
+
+    10% {
+        box-shadow: 0 0 0 0 $txt-bg-color;
+    }
+
+    30% {
+        box-shadow: 0 0 10px 14px $txt-bg-color;
+    }
+
+    40% {
+        background-color: $txt-bg-color;
+    }
+
+    70% {
+        width: 650px;
+        height: 71px;
+    }
+
+    100% {
+        background-color: $txt-bg-color;
+        box-shadow: 0 0 10px 14px $txt-bg-color;
+        width: 350px;
+        height: 92px;
+
+    }
+}
+
+@keyframes txtServiceWordAnim {
+    0% {
+        color: transparent;
+    }
+
+
+    50% {
+        color: $txt-color;
+
+    }
+
+
+    60% {
+        color: $txt-color;
+
+    }
+
+    100% {
+        color: transparent;
+    }
+}
+
+@keyframes txtServiceNameAnim {
+    0% {
+        color: transparent;
+    }
+
+    40% {
+        color: $txt-color;
+
+    }
+
+    50% {
+        color: $txt-color;
+
+    }
+
+    100% {
+        color: rgba($txt-color, .5);
+
+    }
+}
+
+@keyframes txtWapperAnim {
+    0% {
+        transform: translate(0, 101%)
+    }
+
+    45% {
+        transform: translate(0, 0%)
+    }
+
+    60% {
+        transform: translate(0, 0%)
+    }
+
+    100% {
+        transform: translate(0, -101%)
+    }
+}
+
+
+.itemWrapper {
+    @include verticalItem(flex-end);
+    @include horizontalItem(flex-end);
+    height: calc(100vh - 70px);
+    background-image: url('~/public/station_phone.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -20px -20px 40px -20px;
+
+    /* ▼画面サイズ（横幅）が700px以上の場合に適用 */
+    @media screen and (min-width: 700px) {
+        margin: -70px -70px 140px -70px;
+
+    }
+
+    .txtWrapper {
+        padding: 0 20px 50px 0;
+
+        .serviceTxt {
+            overflow: hidden;
+            position: relative;
+            width: 260px;
+            height: 30px;
+            animation: txtBgAnim 2.8s ease 4s forwards;
+
+            /* ▼画面サイズ（横幅）が700px以上の場合に適用 */
+            @media screen and (min-width: 700px) {
+                width: 650px;
+                height: 71px;
+                animation: txtBgAnimPc 2.8s ease 4s forwards;
+
+            }
+
+
+            .serviceWord {
+                @include txtAnimProp();
+                animation: txtServiceWordAnim 3s ease 3.5s forwards;
+            }
+
+            .serviceName {
+                @include txtAnimProp();
+                animation: txtServiceNameAnim 2.7s ease 6s forwards
+
+            }
+
+            &::after {
+                background: linear-gradient(to right, $secondary-color 0%, darken($secondary-color, 20%) 40%, darken($secondary-color, 30%) 100%);
+                bottom: 0;
+                content: '';
+                display: block;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transform: translate(0, 100%);
+                animation: txtWapperAnim 1.2s cubic-bezier(0.8, 0, 0.170, 1) 3.5s forwards;
+            }
+
+            @include txt(18px);
+
+        }
+    }
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+    .itemWrapper {
+
+        background-image: url('~/public/station.jpg');
+
+        .txtWrapper {
+            padding: 0 10% 5% 0;
+
+            .serviceTxt {
+                @include txt(50px);
+
+            }
+        }
+    }
+
+}

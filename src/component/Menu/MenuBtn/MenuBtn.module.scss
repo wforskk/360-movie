@@ -1,0 +1,49 @@
+@import "~/src/style/static.scss";
+
+
+// アニメーション名
+@keyframes hoverMenu {
+
+    // スタート
+    0% {
+        box-shadow: 0 0 0 1px inset $secondary-color;
+    }
+
+    // エンド
+    100% {
+        box-shadow: 0 0 0 2px inset $secondary-color;
+    }
+}
+
+.content {
+    @include verticalItem(center);
+    @include horizontalItem(center);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $primary-color;
+    height: 300px;
+    width: 200px;
+    box-shadow: 0 0 0 1px inset $secondary-color;
+
+    &:hover {
+        animation: hoverMenu .5s ease 1 forwards;
+    }
+
+    .btnWrapper {
+        padding: 10px;
+
+        button {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        height: 100vh;
+        width: 100vw;
+    }
+}

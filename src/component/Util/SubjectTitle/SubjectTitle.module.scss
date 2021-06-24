@@ -5,6 +5,10 @@
     font-size: 26px;
     text-align: center;
     color: $secondary-color;
+    /* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+    @media screen and (min-width: 600px) {
+        font-size: 36px;
+    }
 
 }
 

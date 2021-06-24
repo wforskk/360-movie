@@ -1,26 +1,83 @@
 @import "~/src/style/static.scss";
 
-.button {
+@mixin btnStyle($color, $bg-color, $border-color) {
+    position: relative;
     display: inline-block;
+    box-sizing: border-box;
     margin: 5px 0;
     padding: 0px 15px;
+    margin-left: 10px;
+    margin-right: 10px;
     height: 40px;
-    background-color: $secondary-color;
-    color: $primary-color;
-    border-width: 0;
-    font-weight: 600;
+    color: $color;
+    background-color: $bg-color;
+    border-width: 1px;
+    border: 1px solid $border-color;
+    font-weight: 400;
     font-size: 16px;
-    @include hover();
-}
+    border-radius: 2px;
 
-/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
-@media screen and (min-width: 600px) {
+    &:hover {
+        cursor: pointer;
+    }
 
-    .button {
+    /* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+    @media screen and (min-width: 600px) {
         display: inline-block;
         padding: 0px 20px;
-        height: 40px;
-        font-weight: 600;
         font-size: 20px;
     }
+}
+
+@mixin disabled() {
+    &:disabled {
+        color: rgb(151, 149, 149);
+        background-color: rgb(92, 91, 91);
+        box-shadow: 0 0 0 0 $secondary-color;
+        margin-bottom: 5px;
+        border-width: 0;
+
+        &:hover {
+            box-shadow: 0 0 0 0 $secondary-color;
+        }
+
+        &:after {
+            height: 0;
+        }
+    }
+
+}
+
+.normalBtn {
+    @include btnStyle($primary-color, $secondary-color, $secondary-color);
+
+    &:hover {
+        box-shadow: 0 0 0 1px $secondary-color;
+    }
+
+    @include disabled();
+}
+
+.borderBtn {
+    @include btnStyle($secondary-color, $primary-color, $primary-color);
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: inherit;
+        top: inherit;
+        left: 10%;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background: $secondary-color;
+        transition: 100ms ease all;
+    }
+
+    &:hover:after {
+        width: 80%;
+        transition: 400ms ease all;
+    }
+
+    @include disabled();
 }

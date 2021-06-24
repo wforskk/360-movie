@@ -2,36 +2,36 @@
 
 * {
     color: $txt-color;
-    font-family: "YuGothic";
-}
-
-button {
-    display: inline-block;
-    margin: 8px 0;
-    padding: 0px 20px;
-    height: 30px;
-    background-color: $secondary-color;
-    color: $primary-color;
-    border-width: 0;
-    font-weight: 600;
-
-    * {
-        color: inherit
-    }
-
-    @include hover();
+    font-family: "Roboto";
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 h2 {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 12px;
+}
+
+/* ▼画面サイズ（横幅）が600px以上の場合に適用 */
+@media screen and (min-width: 600px) {
+
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+    }
 }
 
 ul,
